@@ -1,0 +1,50 @@
+<template>
+  <v-container class="mt-5">
+    <v-row class="mt-5 text-center" justify="center">
+      <v-col cols="12" md="8" class="mb-4">
+        <h2 class="display-1 text-center mb-5">Habilidades 💪</h2>
+
+        <v-chip
+          v-for="skill in skills"
+          :key="skill"
+          class="ma-3"
+          color="blue-grey darken-2"
+          large
+          text-color="white"
+        >
+          <v-icon left>mdi-check</v-icon>
+
+          {{ skill }}
+        </v-chip>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<script>
+export default {
+  data: () => ({
+    skills: [
+      "HTML",
+      "CSS",
+      "JAVASCRIPT",
+      "GIT",
+      "GITHUB",
+      "GITLAB",
+      "VUE",
+      "VUETIFY",
+      "ANGULAR",
+      "NEBULAR",
+      "BOOTSTRAP",
+      "TAILWIND",
+      "PHP",
+      "LARAVEL",
+      "MYSQL",
+      "ORACLE",
+    ],
+  }),
+};
+</script>
+
+<style lang="scss" scoped>
+</style>
