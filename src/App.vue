@@ -37,13 +37,14 @@
       </v-app-bar>
 
       <v-main class="mt-5" transition="fade-transition">
-        <HomeComponent />
-        <ExperienceComponent />
-        <SkillsComponent />
-        <FooterComponent />
+          <HomeComponent />
+          <ExperienceComponent />
+          <SkillsComponent />
+          <RepositoriesComponent/>
+          <FooterComponent />
       </v-main>
     </template>
-    <v-container v-else style="height: 800px">
+    <v-container v-else style="height: 50%" transition="fade-transition">
       <v-row class="fill-height" align-content="center" justify="center">
         <v-col class="text-subtitle-1 text-center" cols="12">
           <h2>andycodev</h2>
@@ -66,6 +67,7 @@ import HomeComponent from "./components/HomeComponent";
 import ExperienceComponent from "./components/ExperienceComponent";
 import SkillsComponent from "./components/SkillsComponent";
 import FooterComponent from "./components/FooterComponent";
+import RepositoriesComponent from "./components/RepositoriesComponent";
 
 export default {
 
@@ -76,11 +78,13 @@ export default {
     ExperienceComponent,
     SkillsComponent,
     FooterComponent,
+    RepositoriesComponent,
   },
 
   data: () => ({
 
     loading: false,
+    expand: false,
 
     redesSociales: [
       {
@@ -122,6 +126,7 @@ export default {
 
   methods: {
     cargarContenido() {
+      this.expand = true;
       setTimeout(() => {
         this.loading = true;
       }, 1000);
@@ -135,7 +140,7 @@ export default {
 </script>
 <style>
 * {
-  font-family: Cascadia Code;
+  font-family:  monaco, cascadia code;
 }
 
 
