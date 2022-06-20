@@ -3,7 +3,7 @@
     <v-row class="mt-5" justify="center">
       <v-col cols="12" md="8" class="mb-4">
         <h2 class="display-1 text-center mb-5">Repositorios 📂</h2>
-        <p class="text-left grey--text">Últimos repositorios creados en mi Github</p>
+        <p class="text-left grey--text">Últimos repositorios creados en mi Github | <a href="https://github.com/andycodev?tab=repositories" target="_blank">ver todos</a></p>
         <v-row>
           <v-col
             v-for="repositorie in sortRopositories"
@@ -26,7 +26,7 @@
             </v-card>
           </v-col>
         </v-row>
-        <!-- <v-btn class="mt-5" outlined color="indigo">ver todos</v-btn> -->
+        
       </v-col>
     </v-row>
   </v-container>
