@@ -43,11 +43,11 @@ export default {
         name: "Instagram",
         url: "https://www.instagram.com/andygiampierre/",
       },
-      {
-        id: 5,
-        name: "Facebook",
-        url: "https://www.facebook.com/agov10/",
-      },
+      // {
+      //   id: 5,
+      //   name: "Facebook",
+      //   url: "https://www.facebook.com/agov10/",
+      // },
     ],
   }),
 

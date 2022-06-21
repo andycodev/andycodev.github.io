@@ -44,7 +44,7 @@
           <FooterComponent />
       </v-main>
     </template>
-    <v-container v-else style="height: 50%" transition="fade-transition">
+    <v-container v-else style="height: 800px" transition="fade-transition">
       <v-row class="fill-height" align-content="center" justify="center">
         <v-col class="text-subtitle-1 text-center" cols="12">
           <h2>andycodev</h2>

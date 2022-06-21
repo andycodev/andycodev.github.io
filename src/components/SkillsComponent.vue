@@ -8,7 +8,7 @@
           v-for="skill in skills"
           :key="skill"
           class="ma-3"
-          color="blue-grey darken-2"
+          color="grey darken-3"
           large
           text-color="white"
         >

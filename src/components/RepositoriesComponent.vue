@@ -3,7 +3,24 @@
     <v-row class="mt-5" justify="center">
       <v-col cols="12" md="8" class="mb-4">
         <h2 class="display-1 text-center mb-5">Repositorios 📂</h2>
-        <p class="text-left grey--text">Últimos repositorios creados en mi Github | <a href="https://github.com/andycodev?tab=repositories" target="_blank">ver todos</a></p>
+        <p class="text-center grey--text">Usuarios Github: andycodev | giampierre</p>
+        <v-row align="center">
+          <v-col class="d-flex" cols="12" sm="6">
+            <p class="text-left grey--text">
+              Últimos repositorios en mi Github |
+              <a
+                :href="`https://github.com/${selectionUser}?tab=repositories`"
+                target="_blank"
+                >ver todos</a
+              >
+              <v-icon>mdi-arrow-up-right</v-icon>
+            </p>
+          </v-col>
+
+          <v-col class="d-flex" cols="12" sm="6">
+            <v-select :items="items" @change="onChange()" v-model="selectionUser" label="andycodev" dense solo></v-select>
+          </v-col>
+        </v-row>
         <v-row>
           <v-col
             v-for="repositorie in sortRopositories"
@@ -11,7 +28,13 @@
             cols="12"
             sm="6"
           >
-            <v-card color="#385F73" dark class="pt-2 pl-2 pb-2 card-mh">
+            <v-card
+              color="blue lighten-5"
+              elevation="3"
+              light
+              shaped
+              class="pt-2 pl-2 pb-2 card-mh"
+            >
               <v-card-title class="text-h5">
                 {{ repositorie.name }}</v-card-title
               >
@@ -21,24 +44,31 @@
               </v-card-subtitle>
 
               <v-card-actions>
-                <v-btn outlined rounded small @click="openPage(repositorie.url)" > visitar repositorio </v-btn>
+                <v-btn
+                  outlined
+                  rounded
+                  small
+                  @click="openPage(repositorie.url)"
+                >
+                  visitar repositorio
+                </v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
         </v-row>
-        
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-const API_REPOS = "https://api.github.com/users/andycodev/repos";
 
 export default {
   name: "RepositoriesComponent",
   data: () => ({
     repositories: [],
+    selectionUser: "andycodev",
+    items: ["andycodev", "giampierre"],
   }),
 
   mounted() {
@@ -49,18 +79,23 @@ export default {
   },
 
   methods: {
+
+    onChange(){
+      this.getRepositories();
+    },
+
     async getRepositories() {
       try {
-        const response = await fetch(API_REPOS);
+        const response = await fetch(`https://api.github.com/users/${this.selectionUser}/repos`);
         this.repositories = await response.json();
       } catch (error) {
         console.log(error);
       }
     },
 
-    openPage(url){
-      window.open(`${url}`, '_blank')
-    }
+    openPage(url) {
+      window.open(`${url}`, "_blank");
+    },
   },
 
   computed: {

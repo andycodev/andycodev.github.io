@@ -12,7 +12,7 @@
           >
             <span slot="opposite">{{ experience.date }}</span>
             <v-card class="elevation-2">
-              <v-card-title class="text-h5">
+              <v-card-title class="text-h6">
                 {{ experience.entity }}
               </v-card-title>
               <v-card-text>
