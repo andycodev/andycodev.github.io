@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <template v-if="loading">
-      <v-app-bar color="indigo lighten-2" dense fixed dark>
+      <v-app-bar color="indigo lighten-1" dense fixed dark>
         <v-toolbar-title>andycodev</v-toolbar-title>
 
         <v-spacer></v-spacer>

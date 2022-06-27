@@ -8,9 +8,9 @@
           v-for="skill in skills"
           :key="skill"
           class="ma-3"
-          color="grey darken-3"
+          color="light"
           large
-          text-color="white"
+          text-color="grey darken-3"
         >
           <v-icon left>mdi-check</v-icon>
 

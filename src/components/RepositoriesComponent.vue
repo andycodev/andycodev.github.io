@@ -7,7 +7,7 @@
         <v-row align="center">
           <v-col class="d-flex" cols="12" sm="6">
             <p class="text-left grey--text">
-              Últimos repositorios en mi Github |
+              Últimos repositorios |
               <a
                 :href="`https://github.com/${selectionUser}?tab=repositories`"
                 target="_blank"
@@ -29,10 +29,9 @@
             sm="6"
           >
             <v-card
-              color="blue lighten-5"
-              elevation="3"
+              color="indigo lighten-5"
+              elevation="2"
               light
-              shaped
               class="pt-2 pl-2 pb-2 card-mh"
             >
               <v-card-title class="text-h5">
