@@ -9,31 +9,6 @@
         <v-btn v-for="redSocial in redesSociales" :key="redSocial.id" @click="openPage(redSocial.url)" icon>
           <v-icon>{{redSocial.icon}}</v-icon>
         </v-btn>
-
-        <!-- <v-menu
-        left
-        bottom
-      >
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            icon
-            v-bind="attrs"
-            v-on="on"
-          >
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </template>
-
-        <v-list>
-          <v-list-item
-            v-for="n in 5"
-            :key="n"
-            @click="() => {}"
-          >
-            <v-list-item-title>Option {{ n }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu> -->
       </v-app-bar>
 
       <v-main class="mt-5" transition="fade-transition">
@@ -41,6 +16,7 @@
           <ExperienceComponent />
           <SkillsComponent />
           <RepositoriesComponent/>
+          <ContactComponent/>
           <FooterComponent />
       </v-main>
     </template>
@@ -68,6 +44,7 @@ import ExperienceComponent from "./components/ExperienceComponent";
 import SkillsComponent from "./components/SkillsComponent";
 import FooterComponent from "./components/FooterComponent";
 import RepositoriesComponent from "./components/RepositoriesComponent";
+import ContactComponent from "./components/ContactComponent"
 
 export default {
 
@@ -79,6 +56,7 @@ export default {
     SkillsComponent,
     FooterComponent,
     RepositoriesComponent,
+    ContactComponent
   },
 
   data: () => ({
