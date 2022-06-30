@@ -12,21 +12,34 @@
 # abort on errors
 set -e
 
+echo "iniciando ..."
+
 # Verificamos que si existe directorio docs
-if [ -d docs ]
-then
+#if [ -d docs ]
+#then
   # Si existe directorio lo eliminamos
-   rm -r docs
-   echo "El directorio docs eliminado"
+  # rm -rf docs
+  # echo "El directorio docs eliminado"
 
-fi
+#fi
+
   # Si no existe directorio dos
-
-  # Contruimos para producción
+  echo "Construimos para producción"
+  # Construimos para producción
    npm run build
 
+  echo "Creamos carpeta docs"
+
+  mkdir docs
+
+  echo "Copiamos contenido"
+   cp -rl dist docs 
+
+  echo "Eliminamos dist" 
+  rm -rf dist
+
    # Renombramos la carpeta dist por docs
-   mv dist docs
+   #mv -f dist docs
 
    # Agregamos todos los archivos modificados al repo
    git add .
