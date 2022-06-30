@@ -22,24 +22,24 @@ echo "iniciando ..."
     echo "directorio docs eliminado"
   fi
 
-  echo "Creamos carpeta docs"
-  mkdir docs
-
+  #echo "Creamos carpeta docs"
+  #mkdir docs
 
   echo "Construimos para producción"
   # Construimos para producción
   npm run build
 
 
-  echo "Copiamos contenido"
+  #echo "Copiamos contenido"
   #cp -rl dist docs 
-  cp -ap dist docs
+  #cp -ap dist docs
 
-  echo "Eliminamos dist" 
-  rm -rf dist
+  #echo "Eliminamos dist" 
+  #rm -rf dist
 
-   # Renombramos la carpeta dist por docs
-   #mv -f dist docs
+   #Renombramos la carpeta dist por docs
+   echo "Renombrando carpeta dist"
+   mv dist docs
 
    # Agregamos todos los archivos modificados al repo
    git add .
