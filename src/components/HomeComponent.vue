@@ -20,8 +20,8 @@
           Peruana Unión - Lima.
         </p>
         <p class="mb-3">🎯 Enfocado al desarrollo web.</p>
-        <!-- <v-btn class="mr-3" elevation="4" large>Descargar CV</v-btn> -->
-        <v-btn @click="openPage()" elevation="2" large>Linkedin</v-btn>
+        <v-btn @click="descargarCurriculum()" class="mr-3" elevation="2" large>Currículum <v-icon color="grey darken-1">mdi-download</v-icon></v-btn>
+        <v-btn @click="openPage()" elevation="2" large>Linkedin <v-icon color="grey darken-1">mdi-linkedin</v-icon></v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -40,6 +40,11 @@ export default {
         "_blank"
       );
     },
+
+    descargarCurriculum(){
+     event.preventDefault();
+      window.open("https://github.com/andycodev/curriculum-vitae/raw/main/CV_AndyGiampierreOrdo%C3%B1ezVega.pdf", "_self");
+    }
   },
 };
 </script>
