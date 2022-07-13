@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <template v-if="loading">
-      <v-app-bar color="indigo lighten-1" dense fixed dark>
-        <v-toolbar-title>andycodev</v-toolbar-title>
+      <v-app-bar color="blue darken-2" elevation="2" dense fixed dark>
+        <v-toolbar-title>[ andycodev ]</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
@@ -27,7 +27,7 @@
         </v-col>
         <v-col cols="4">
           <v-progress-linear
-            color="indigo accent-4"
+            color="blue ligthen-5"
             indeterminate
             rounded
             height="6"
@@ -118,7 +118,7 @@ export default {
 </script>
 <style>
 * {
-  font-family:  monaco, cascadia code;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 

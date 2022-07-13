@@ -1,27 +1,41 @@
 <template>
   <v-container class="mt-5">
     <v-row class="text-center mt-5" justify="center">
-      <v-col cols="12 mt-3" left  md="3">
+      <v-col cols="12 mt-3" left md="3">
         <v-avatar color="" size="200">
-          <v-img
-            :src="require('../assets/andycodev.png')"
-            class="my-3 mt-5"
-            contain
-            height="200"
-          />
+          <v-img :src="require('../assets/andycodev.png')" class="my-3 mt-5" contain height="200" />
         </v-avatar>
       </v-col>
 
       <v-col cols="12" md="5" class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">Hola👋, Soy Andy</h1>
-        <center><h2 class="efect-write">Desarrollador Fullstack</h2></center>
+        <center>
+          <h2 class="efect-write">Desarrollador Fullstack</h2>
+        </center>
         <p class="mt-3">
           👨‍🎓 Egresado de la carrera de Ingeniería de Sistemas de la Universidad
           Peruana Unión - Lima.
         </p>
         <p class="mb-3">🎯 Enfocado al desarrollo web.</p>
-        <v-btn @click="descargarCurriculum()" class="mr-3" elevation="2" large>Currículum <v-icon color="grey darken-1">mdi-download</v-icon></v-btn>
-        <v-btn @click="openPage()" elevation="2" large>Linkedin <v-icon color="grey darken-1">mdi-linkedin</v-icon></v-btn>
+        <v-menu offset-y>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn color="blue lighten-1" dark v-bind="attrs" v-on="on"  @click="show = !show">
+              Currículum <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item v-for="(item, index) in items" :key="index" class="text-center">
+              <v-list-item-title class="cursor" @click="opcionesCurriculum(item.value)">{{
+                  item.title
+              }}  <v-icon size="medium">{{item.icon}}</v-icon></v-list-item-title>
+             
+            </v-list-item>
+          </v-list>
+        </v-menu>
+        <!-- <v-btn @click="descargarCurriculum()" class="mr-3" elevation="2" large>Currículum <v-icon color="grey darken-1">mdi-download</v-icon></v-btn> -->
+        <!-- <v-btn @click="openPage()" elevation="2" large
+          >Linkedin <v-icon color="grey darken-1">mdi-linkedin</v-icon></v-btn
+        > -->
       </v-col>
     </v-row>
   </v-container>
@@ -31,44 +45,68 @@
 export default {
   name: "HomeComponent",
 
-  data: () => ({}),
+  data: () => ({
+    items: [{ title: "Visualizar", value: 'v', icon: 'mdi-eye' }, { title: "Descargar", value: 'd', icon: 'mdi-download' }],
+    show: false,
+    linkBaseCurriculumGitHUB: 'https://github.com/andycodev/curriculum-vitae/',
+    nombreCurriculum: 'CV_AndyGiampierreOrdo%C3%B1ezVega.pdf'
+  }),
 
   methods: {
-    openPage() {
+    /* openPage() {
       window.open(
         "https://www.linkedin.com/in/andygiampierreordonezvega/",
         "_blank"
       );
     },
+ */
+    descargarCurriculum() {
+      window.open(
+        `${this.linkBaseCurriculumGitHUB}raw/main/${this.nombreCurriculum}`,
+        "_self"
+      );
+    },
 
-    descargarCurriculum(){
-     event.preventDefault();
-      window.open("https://github.com/andycodev/curriculum-vitae/raw/main/CV_AndyGiampierreOrdo%C3%B1ezVega.pdf", "_self");
-    }
+    visualizarCurriculum() {
+      window.open(
+        `${this.linkBaseCurriculumGitHUB}blob/main/${this.nombreCurriculum}`,
+        "_blank"
+      );
+    },
+
+    opcionesCurriculum(value) {
+      if(value === 'v') this.visualizarCurriculum();
+      if(value === 'd') this.descargarCurriculum();
+    },
   },
 };
 </script>
 
 <style scoped>
-
-.efect-write{
+.efect-write {
   display: block;
   white-space: nowrap;
   border-right: 4px solid;
-  width: 25ch;
+  width: 22ch;
   color: #2b649d;
 
-  animation: typing 2s steps(25), blink .5s infinite 
-  step-end alternate;
+  animation: typing 2s steps(22), blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }
 
 @keyframes typing {
-  from { width: 0 }
+  from {
+    width: 0;
+  }
 }
 
 @keyframes blink {
-  50% { border-color: transparent }
+  50% {
+    border-color: transparent;
+  }
 }
 
+.cursor {
+  cursor: pointer;
+}
 </style>
