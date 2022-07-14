@@ -13,10 +13,11 @@
           <h2 class="efect-write">Desarrollador Fullstack</h2>
         </center>
         <p class="mt-3">
-          👨‍🎓 Egresado de la carrera de Ingeniería de Sistemas de la Universidad
-          Peruana Unión - Lima.
+          <!-- Egresado de la carrera de Ingeniería de Sistemas de la Universidad
+          Peruana Unión - Lima. Enfocado al desarrollo web. -->
+          Analista Desarrollador en la Universidad Peruana Unión - Lima.
+          Enfocado en el desarrollo web, a la resolución de problemas y acostumbrado a trabajar en equipo.
         </p>
-        <p class="mb-3">🎯 Enfocado al desarrollo web.</p>
         <v-menu offset-y>
           <template v-slot:activator="{ on, attrs }">
             <v-btn color="blue lighten-1" dark v-bind="attrs" v-on="on"  @click="show = !show">
@@ -43,7 +44,7 @@
 
 <script>
 export default {
-  name: "HomeComponent",
+  name: 'HomeComponent',
 
   data: () => ({
     items: [{ title: "Visualizar", value: 'v', icon: 'mdi-eye' }, { title: "Descargar", value: 'd', icon: 'mdi-download' }],

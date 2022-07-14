@@ -29,7 +29,7 @@
             sm="6"
           >
             <v-card
-              color="indigo lighten-5"
+              color="grey lighten-5"
               elevation="2"
               light
               class="pt-2 pl-2 pb-2 card-mh"
@@ -52,6 +52,7 @@
                   visitar repositorio
                 </v-btn>
               </v-card-actions>
+              <span class="ml-5 grey--text">Fecha de creación: {{ repositorie.date }}</span>
             </v-card>
           </v-col>
         </v-row>
@@ -63,7 +64,7 @@
 <script>
 
 export default {
-  name: "RepositoriesComponent",
+  name: 'RepositoriesComponent',
   data: () => ({
     repositories: [],
     selectionUser: "andycodev",

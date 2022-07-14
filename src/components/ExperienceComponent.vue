@@ -28,8 +28,8 @@
 
 <script>
 export default {
+  name: 'ExperienceComponent',
   data: () => ({
-    reverseInfo: false,
     experiences: [
       {
         id: 1,
@@ -56,14 +56,14 @@ export default {
         entity: "Universidad Peruana Unión",
         date: "(MAY 2020 - ACTUAL)",
         description:
-          "Desarrollar junto con el equipo las nuevas funcionalidades y actualizaciones del LMS UPeU PatmOS. Desarrollar requerimientos de módulos financieros.",
+          "Desarrollar junto con el equipo las nuevas funcionalidades y actualizaciones del LMS de la universidad. Desarrollar requerimientos y migraciones de módulos financieros.",
       },
     ],
   }),
 
   methods: {
     reverseExperience(){
-        this.experiences.reverse();
+      this.experiences.reverse();
     }
   }
 };

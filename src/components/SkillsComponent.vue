@@ -16,6 +16,8 @@
 
           {{ skill }}
         </v-chip>
+
+        <template> </template>
       </v-col>
     </v-row>
   </v-container>
@@ -23,6 +25,7 @@
 
 <script>
 export default {
+  name: "SkillsComponent",
   data: () => ({
     skills: [
       "HTML",
@@ -46,5 +49,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
