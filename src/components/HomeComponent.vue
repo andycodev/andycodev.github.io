@@ -20,7 +20,7 @@
         </p>
         <v-menu offset-y>
           <template v-slot:activator="{ on, attrs }">
-            <v-btn color="blue lighten-1" dark v-bind="attrs" v-on="on"  @click="show = !show">
+            <v-btn color="indigo lighten-1" dark v-bind="attrs" v-on="on"  @click="show = !show">
               Currículum <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
             </v-btn>
           </template>

@@ -12,7 +12,7 @@
       >
         {{ redSocial.name }}
       </v-btn>
-      <v-col class="blue lighten-2 py-4 text-center white--text" cols="12">
+      <v-col class="indigo lighten-2 py-4 text-center white--text" cols="12">
         {{ new Date().getFullYear() }} — <strong>andycodev 👨‍💻</strong>
       </v-col>
     </v-row>
