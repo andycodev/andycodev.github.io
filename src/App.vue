@@ -15,6 +15,7 @@
           <HomeComponent />
           <ExperienceComponent />
           <SkillsComponent />
+         <!--  <ProjectsComponent /> -->
           <RepositoriesComponent/>
           <ContactComponent/>
           <FooterComponent />
@@ -42,6 +43,7 @@
 import HomeComponent from "./components/HomeComponent";
 import ExperienceComponent from "./components/ExperienceComponent";
 import SkillsComponent from "./components/SkillsComponent";
+/* import ProjectsComponent from "./components/ProjectsComponent"; */
 import FooterComponent from "./components/FooterComponent";
 import RepositoriesComponent from "./components/RepositoriesComponent";
 import ContactComponent from "./components/ContactComponent"
@@ -54,6 +56,7 @@ export default {
     HomeComponent,
     ExperienceComponent,
     SkillsComponent,
+    /* ProjectsComponent, */
     FooterComponent,
     RepositoriesComponent,
     ContactComponent

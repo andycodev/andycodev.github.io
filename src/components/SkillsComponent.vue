@@ -39,7 +39,7 @@ export default {
       "ANGULAR",
       "NEBULAR",
       "BOOTSTRAP",
-      "TAILWIND",
+      "TAILWIND CSS",
       "PHP",
       "LARAVEL",
       "MYSQL",
