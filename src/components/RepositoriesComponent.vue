@@ -26,7 +26,7 @@
             v-for="repositorie in sortRopositories"
             :key="repositorie.id"
             cols="12"
-            sm="6"
+            sm=""
           >
             <v-card
               color="grey lighten-5"

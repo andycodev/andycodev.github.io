@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <template v-if="loading">
-      <v-app-bar color="indigo lighten-1" elevation="2" dense fixed dark rounded="b-xl">
-        <v-toolbar-title>[ andycodev ]</v-toolbar-title>
+      <v-app-bar color="indigo lighten-1" elevation="2" dense fixed dark rounded="b-lg">
+        <v-toolbar-title> andycodev</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
@@ -15,7 +15,7 @@
           <HomeComponent />
           <ExperienceComponent />
           <SkillsComponent />
-         <!--  <ProjectsComponent /> -->
+          <ProjectsComponent />
           <RepositoriesComponent/>
           <ContactComponent/>
           <FooterComponent />
@@ -43,7 +43,7 @@
 import HomeComponent from "./components/HomeComponent";
 import ExperienceComponent from "./components/ExperienceComponent";
 import SkillsComponent from "./components/SkillsComponent";
-/* import ProjectsComponent from "./components/ProjectsComponent"; */
+import ProjectsComponent from "./components/ProjectsComponent";
 import FooterComponent from "./components/FooterComponent";
 import RepositoriesComponent from "./components/RepositoriesComponent";
 import ContactComponent from "./components/ContactComponent"
@@ -56,7 +56,7 @@ export default {
     HomeComponent,
     ExperienceComponent,
     SkillsComponent,
-    /* ProjectsComponent, */
+    ProjectsComponent,
     FooterComponent,
     RepositoriesComponent,
     ContactComponent
