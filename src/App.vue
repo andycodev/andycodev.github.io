@@ -28,7 +28,7 @@
         </v-col>
         <v-col cols="4">
           <v-progress-linear
-            color="blue ligthen-5"
+            color="indigo ligthen-2"
             indeterminate
             rounded
             height="6"
