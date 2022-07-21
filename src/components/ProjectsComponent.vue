@@ -4,7 +4,7 @@
         <v-container v-for="type in types" :key="type.id" class="lighten-4">
             <v-subheader class="grey--text">{{ type.name }}</v-subheader>
 
-            <v-row>
+            <v-row justufy="center">
                 <v-spacer></v-spacer>
                 <v-col v-for="project in projects" :key="project.id" cols="12" sm="6" md="4">
                     <!-- <v-card-header>
@@ -75,6 +75,7 @@ export default {
                 github: "https://github.com/andycodev/crud-laravel-angular",
                 web: "",
             },
+            
             /* {
                     id: 4,
                     name: "Vue",
