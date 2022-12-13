@@ -2,8 +2,8 @@
   <v-container class="mt-5">
     <v-row class="text-center mt-5" justify="center">
       <v-col cols="12 mt-3" left md="3">
-        <v-avatar color="" size="200">
-          <v-img :src="require('../assets/perfil-andycodev.jpg')" class="my-3 mt-5" max-height="200" position="top"/>
+        <v-avatar color="indigo lighten-1" size="200" >
+          <v-img :src="require('../assets/perfil-andycodev.jpg')" class="my-3 mt-5" position />
         </v-avatar>
       </v-col>
 
