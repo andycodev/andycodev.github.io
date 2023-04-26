@@ -1,5 +1,5 @@
 <template>
-  <div class="col-span-12 md:col-span-8 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-white mt-2">
+  <div id="experience" class="col-span-12 md:col-span-8 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-white mt-2">
     <h2 class="mb-2 text-lg text-left font-semibold text-gray-600">Experiencia</h2>
     <div class="mb-5" v-for="(experience, index) in experiences" :key="experience.id">
       <div class="flex items-center space-x-4 mb-3">

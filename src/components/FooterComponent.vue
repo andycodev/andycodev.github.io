@@ -1,5 +1,8 @@
 <template>
-  <h2 class="ml-2 mt-4 mb-4 text-base text-left font-medium text-gray-500">2023 — andycodev 👨‍💻</h2>
+  <div class="flex items-center mt-3">
+    <h2 class="ml-2 mt-4 mb-4 text-base text-left font-medium text-gray-500">2023 — andycodev 👨‍💻</h2>
+    <button class="button-secondary text-right" v-show="showScrollButton" @click="scrollToTop">Volver al inicio</button>
+  </div>
   <!-- <v-footer color="grey lighten-2" class="mt-5" light padless>
     <v-row justify="center" no-gutters>
       <v-btn
@@ -46,9 +49,32 @@ export default {
         url: "https://www.instagram.com/andygiampierre/",
       },
     ],
+    showScrollButton: false
   }),
 
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+
   methods: {
+
+    handleScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const maxScroll = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      this.showScrollButton = scrollTop > 0.8 * maxScroll;
+    },
+
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    },
+
     openPage(url) {
       window.open(`${url}`, "_blank");
     },

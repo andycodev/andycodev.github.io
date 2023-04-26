@@ -5,6 +5,7 @@
                 <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" /> -->
                 <span class="self-center text-xl font-semibold whitespace-nowrap text-white">andycodev</span>
             </a>
+            <button class="button-primary" @click="scrollToSection">Experiencia</button>
             <!-- <ul class="flex space-x-4">
           <li>
             <img title="Linkedin" class="w-8 h-8 rounded-full cursor-pointer" src="./assets/svgs/linkedin-circle.svg" alt="user photo">
@@ -42,9 +43,16 @@ export default {
     }),
 
     methods: {
+
+        scrollToSection() {
+            const mySection = document.querySelector('#experience');
+            mySection.scrollIntoView({ behavior: 'smooth' });
+        },
+
         openPage(url) {
             window.open(`${url}`, "_blank");
         },
+
     },
 };
 </script>
