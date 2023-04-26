@@ -7,19 +7,15 @@
           <span class="font-medium text-gray-100">E1</span>
         </div>
         <div>
-          <div class="font-medium text-base text-gray-600">{{experience.entity}}</div>
-          <div class="font-medium text-sm text-gray-500">{{experience.rol}}</div>
-          <div class="font-normal text-xs text-gray-400">{{experience.date}}</div>
+          <div class="font-medium text-base text-gray-600">{{ experience.entity }}</div>
+          <div class="font-medium text-sm text-gray-500">{{ experience.rol }}</div>
+          <div class="font-normal text-xs text-gray-400">{{ experience.date }}</div>
           <div class="font-normal text-xs text-gray-400">Lima, Perú</div>
         </div>
       </div>
       <ul class="font-normal text-base sm:text-sm text-gray-400 space-y-1 list-disc list-inside">
-        <li>
-          Desarrollar junto con el equipo las nuevas funcionalidades y actualizaciones del LMS de la universidad.
-          Desarrollar requerimientos y migraciones de módulos financieros.
-        </li>
-        <li>
-          Desarrollar junto con el equipo las nuevas funcionalidades y actualizaciones del LMS de la universidad.
+        <li v-for="(desc, index) in experience.description" :key="index">
+          {{desc}}
         </li>
       </ul>
     </div>
@@ -59,36 +55,55 @@ export default {
         img: "/template/images/programador.svg",
         rol: "Programador",
         entity: "Clínica Good Hope",
-        date: "(FEB 2018 - JUN 2018)",
-        description:
-          "Comprender las necesidades de los usuarios y brindar soporte de los módulos requeridos. Desarrollar requerimientos específicos",
+        date: "Febrero 2018 - Junio 2018",
+        description: {
+          1: "Comprender las necesidades de los usuarios.",
+          2: "Brindar soporte de los módulos requeridos.",
+          3: "Desarrollar requerimientos específicos.",
+          4: "Aprendí nuevas tecnologías y herramientas para mejorar mis habilidades en el desarrollo de software."
+        }
       },
       {
         id: 2,
         img: "/template/images/analista-programador-1.svg",
         rol: "Analista Desarrollador",
         entity: "Clínica Good Hope",
-        date: "(JUL 2018 - ABR 2020)",
-        description:
-          "Gestionar requerimientos de los usuarios, diseñar y crear nuevos programas. Desarrollar modificaciones y mejoras en programas existentes, etc.",
+        date: "Julio 2018 - Abril 2020",
+        description: {
+          1: "Participé en reuniones de equipo para discutir el progreso del proyecto y las tareas pendientes.",
+          2: "Realicé pruebas en el código antes de la entrega del proyecto.",
+          3: "Escribí código en Php y Javascript para el desarrollo de una aplicación web utilizando el framework Laravel para el backend y Vue para el frontend."
+        }
+        /* description:
+          "Gestionar requerimientos de los usuarios, diseñar y crear nuevos programas. Desarrollar modificaciones y mejoras en programas existentes, etc.", */
       },
       {
         id: 3,
         img: "/template/images/analista-progrmador-2.svg",
         rol: "Analista Desarrollador",
         entity: "Universidad Peruana Unión",
-        date: "(MAY 2020 - ACTUAL)",
-        description:
-          "Desarrollar junto con el equipo las nuevas funcionalidades y actualizaciones del LMS de la universidad. Desarrollar requerimientos y migraciones de módulos financieros.",
+        date: "Mayo 2020 - Actualidad",
+        description: {
+          1: "Desarrollar junto con el equipo las nuevas funcionalidades y actualizaciones del LMS de la universidad.",
+          2: "Desarrollar requerimientos y migraciones de módulos con tecnologías Laravel y Angular.",
+        }
+        /* description:
+          "Desarrollar junto con el equipo las nuevas funcionalidades y actualizaciones del LMS de la universidad. Desarrollar requerimientos y migraciones de módulos financieros.", */
       },
     ],
   }),
 
-  methods: {
+  /* mounted: () => {
+    setInterval(() => {
+      this.experiences.reverse();
+    }, 3000);
+  }, */
+
+  /* methods: {
     reverseExperience() {
       this.experiences.reverse();
     }
-  }
+  } */
 };
 </script>
 

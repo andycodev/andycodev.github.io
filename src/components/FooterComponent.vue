@@ -1,5 +1,6 @@
 <template>
-  <v-footer color="grey lighten-2" class="mt-5" light padless>
+  <h2 class="ml-2 mt-4 mb-4 text-base text-left font-medium text-gray-500">2023 — andycodev 👨‍💻</h2>
+  <!-- <v-footer color="grey lighten-2" class="mt-5" light padless>
     <v-row justify="center" no-gutters>
       <v-btn
         v-for="redSocial in redesSociales"
@@ -16,7 +17,7 @@
         {{ new Date().getFullYear() }} — <strong>andycodev 👨‍💻</strong>
       </v-col>
     </v-row>
-  </v-footer>
+  </v-footer> -->
 </template>
 
 <script>
@@ -44,21 +45,15 @@ export default {
         name: "Instagram",
         url: "https://www.instagram.com/andygiampierre/",
       },
-      // {
-      //   id: 5,
-      //   name: "Facebook",
-      //   url: "https://www.facebook.com/agov10/",
-      // },
     ],
   }),
 
   methods: {
     openPage(url) {
-        window.open(`${url}`, "_blank");
+      window.open(`${url}`, "_blank");
     },
   },
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
