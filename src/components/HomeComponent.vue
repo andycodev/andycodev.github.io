@@ -1,5 +1,30 @@
 <template>
-  <v-container class="mt-5">
+  <div class="col-span-12 md:col-span-8 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-white">
+    <div class="flex items-center space-x-4 mb-3">
+      <img class="w-24 h-24 rounded-full" src="../assets/andycodev.png" alt="">
+      <div>
+        <div class="font-semibold text-xl text-gray-600">Andy Giampierre Ordoñez Vega</div>
+        <div class="font-medium text-base text-gray-500">Fullstack Developer</div>
+        <div class="font-normal text-sm text-gray-400">Lima, Perú</div>
+      </div>
+    </div>
+    <p class="font-normal text-base sm:text-sm text-gray-400">
+      Soy Analista Programador, enfocado en desarrollo web y trabajo en equipo para resolver problemas. Mi
+      objetivo es dar soluciones innovadoras y eficientes. Me apasiona la tecnología y siempre estoy en búsqueda
+      de nuevas oportunidades para aprender y mejorar mis habilidades.
+    </p>
+
+    <!-- <div class="flex items-center space-x-1 mt-5">
+              <button class="button-primary">
+                Descargar CV
+              </button>
+              <button class="button-secondary">
+                Github
+              </button>
+            </div> -->
+  </div>
+
+  <!-- <v-container class="mt-5">
     <v-row class="text-center mt-5" justify="center">
       <v-col cols="12 mt-3" left md="3">
         <v-avatar color="indigo lighten-5" size="200" >
@@ -13,8 +38,6 @@
           <h2 class="efect-write">Desarrollador Fullstack</h2>
         </center>
         <p class="mt-3">
-          <!-- Egresado de la carrera de Ingeniería de Sistemas de la Universidad
-          Peruana Unión - Lima. Enfocado al desarrollo web. -->
           Analista Desarrollador en la Universidad Peruana Unión - Lima.
           Enfocado en el desarrollo web, a la resolución de problemas y acostumbrado a trabajar en equipo.
         </p>
@@ -33,13 +56,9 @@
             </v-list-item>
           </v-list>
         </v-menu>
-        <!-- <v-btn @click="descargarCurriculum()" class="mr-3" elevation="2" large>Currículum <v-icon color="grey darken-1">mdi-download</v-icon></v-btn> -->
-        <!-- <v-btn @click="openPage()" elevation="2" large
-          >Linkedin <v-icon color="grey darken-1">mdi-linkedin</v-icon></v-btn
-        > -->
       </v-col>
     </v-row>
-  </v-container>
+  </v-container> -->
 </template>
 
 <script>
@@ -76,8 +95,8 @@ export default {
     },
 
     opcionesCurriculum(value) {
-      if(value === 'v') this.visualizarCurriculum();
-      if(value === 'd') this.descargarCurriculum();
+      if (value === 'v') this.visualizarCurriculum();
+      if (value === 'd') this.descargarCurriculum();
     },
   },
 };

@@ -1,5 +1,43 @@
 <template>
-  <v-container class="mt-5">
+  <div class="hidden col-span-12 md:col-span-8 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-white mt-2">
+    <h2 class="mb-2 text-lg text-left font-semibold text-gray-600">Repositorios</h2>
+    <div class="mb-5">
+      <div class="flex items-center space-x-4 mb-3">
+        <img class="w-14 h-14 rounded-full" src="../assets/svgs/github-circle.svg" alt="">
+        <!-- <div
+                class="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-600 rounded-full">
+                <span class="font-medium text-gray-100">E1</span>
+              </div> -->
+        <div>
+          <div class="font-medium text-sm text-gray-600">Mi página web</div>
+          <div class="font-normal text-xs text-gray-400">25 de marzo de 2023</div>
+          <div class="font-normal text-xs text-gray-400">andycodev</div>
+        </div>
+      </div>
+      <p class="font-normal text-sm sm:text-sm text-gray-400">
+        Es una demo de mi página web oficial ...
+      </p>
+    </div>
+    <div class="mb-5">
+      <div class="flex items-center space-x-4 mb-3">
+        <img class="w-14 h-14 rounded-full" src="../assets/svgs/github-circle.svg" alt="">
+        <!-- <div
+                class="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-600 rounded-full">
+                <span class="font-medium text-gray-100">E1</span>
+              </div> -->
+        <div>
+          <div class="font-medium text-sm text-gray-600">Mi página web</div>
+          <div class="font-normal text-xs text-gray-400">25 de marzo de 2023</div>
+          <div class="font-normal text-xs text-gray-400">andycodev</div>
+        </div>
+      </div>
+      <p class="font-normal text-sm sm:text-sm text-gray-400">
+        Es una demo de mi página web oficial ...
+      </p>
+    </div>
+  </div>
+
+  <!-- <v-container class="mt-5">
     <v-row class="mt-5" justify="center">
       <v-col cols="12" md="12" class="mb-4">
         <h2 class="display-1 text-center mb-5">Repositorios 📂</h2>
@@ -39,7 +77,7 @@
         </v-row>
       </v-col>
     </v-row>
-  </v-container>
+  </v-container> -->
 </template>
 
 <script>

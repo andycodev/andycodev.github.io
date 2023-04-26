@@ -1,52 +1,59 @@
 <template>
-  <v-app>
-    <template v-if="loading">
-      <v-app-bar color="indigo lighten-1" elevation="2" dense fixed dark rounded="b-lg">
-        <v-toolbar-title> andycodev</v-toolbar-title>
-
-        <v-spacer></v-spacer>
-
-        <v-btn v-for="redSocial in redesSociales" :key="redSocial.id" @click="openPage(redSocial.url)" icon>
-          <v-icon>{{redSocial.icon}}</v-icon>
-        </v-btn>
-      </v-app-bar>
-
-      <v-main class="mt-5" transition="fade-transition">
+  <div>
+    <nav class="fixed top-0 w-full bg-gray-800">
+      <div class="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" class="flex items-center">
+          <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" /> -->
+          <span class="self-center text-xl font-semibold whitespace-nowrap text-white">andycodev</span>
+        </a>
+        <!-- <ul class="flex space-x-4">
+          <li>
+            <img title="Linkedin" class="w-8 h-8 rounded-full cursor-pointer" src="./assets/svgs/linkedin-circle.svg" alt="user photo">
+          </li>
+        </ul> -->
+      </div>
+    </nav>
+    <div class="container max-w-screen-lg mx-auto mt-20 px-2">
+      <div class="grid grid-cols-12 gap-2">
+        <div class="col-span-12 md:col-span-8">
           <HomeComponent />
-          <ExperienceComponent />
-          <SkillsComponent />
-          <ProjectsComponent />
-          <RepositoriesComponent/>
-          <ContactComponent/>
-          <FooterComponent />
-      </v-main>
-    </template>
-    <v-container v-else style="height: 800px" transition="fade-transition">
-      <v-row class="fill-height" align-content="center" justify="center">
-        <v-col class="text-subtitle-1 text-center" cols="12">
-          <h2>andycodev</h2>
-        </v-col>
-        <v-col cols="4">
-          <v-progress-linear
-            color="indigo ligthen-2"
-            indeterminate
-            rounded
-            height="6"
-          ></v-progress-linear>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-app>
+          <ExperienceComponent/>
+        </div>
+     
+        <div class="col-span-12 md:col-span-4">
+          <div class="col-span-12 md:col-span-8 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-white">
+            <h2 class="mb-2 text-lg text-left font-semibold text-gray-600">Aptitudes</h2>
+            <ul class="font-normal text-base sm:text-sm text-gray-400 space-y-1 list-disc list-inside">
+              <li>
+                Trabajo en equipo
+              </li>
+              <li>
+                Rapidez de aprendizaje
+              </li>
+              <li>
+                Responsable
+              </li>
+              <li>
+                Autodidacta
+              </li>
+            </ul>
+          </div>
+          <RepositoriesComponent />
+        </div>
+      </div>
+      <h2 class="ml-2 mt-4 mb-4 text-base text-left font-medium text-gray-500">2023 — andycodev 👨‍💻</h2>
+    </div>
+  </div>
 </template>
 
 <script>
 import HomeComponent from "./components/HomeComponent";
 import ExperienceComponent from "./components/ExperienceComponent";
-import SkillsComponent from "./components/SkillsComponent";
+/* import SkillsComponent from "./components/SkillsComponent";
 import ProjectsComponent from "./components/ProjectsComponent";
-import FooterComponent from "./components/FooterComponent";
+import FooterComponent from "./components/FooterComponent"; */
 import RepositoriesComponent from "./components/RepositoriesComponent";
-import ContactComponent from "./components/ContactComponent"
+/* import ContactComponent from "./components/ContactComponent" */
 
 export default {
 
@@ -55,11 +62,11 @@ export default {
   components: {
     HomeComponent,
     ExperienceComponent,
-    SkillsComponent,
+   /*  SkillsComponent,
     ProjectsComponent,
-    FooterComponent,
+    FooterComponent, */
     RepositoriesComponent,
-    ContactComponent
+   /*  ContactComponent */
   },
 
   data: () => ({
@@ -113,16 +120,10 @@ export default {
       }, 1000);
     },
 
-    openPage(url){
+    openPage(url) {
       window.open(`${url}`, '_blank');
     }
   },
 };
 </script>
-<style>
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-
-</style>
