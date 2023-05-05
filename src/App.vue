@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavbarComponent />
-    <div class="container max-w-screen-lg mx-auto mt-24 px-2">
+    <div class="container max-w-screen-lg mx-auto mt-20 px-2">
       <div class="grid grid-cols-12 gap-2">
         <div class="col-span-12 md:col-span-8">
           <HomeComponent />
@@ -10,6 +10,7 @@
         <div class="col-span-12 md:col-span-4">
           <AptitudesComponent />
           <RepositoriesComponent />
+          <ContactComponent />
         </div>
       </div>
       <FooterComponent />
@@ -26,7 +27,7 @@ import ExperienceComponent from "./components/ExperienceComponent"
 import ProjectsComponent from "./components/ProjectsComponent"; */
 import RepositoriesComponent from "./components/RepositoriesComponent"
 import FooterComponent from "./components/FooterComponent.vue"
-/* import ContactComponent from "./components/ContactComponent" */
+import ContactComponent from "./components/ContactComponent"
 
 export default {
 
@@ -39,6 +40,7 @@ export default {
     ExperienceComponent,
     /* SkillsComponent,
     ProjectsComponent, */
+    ContactComponent,
     RepositoriesComponent,
     FooterComponent
   },
