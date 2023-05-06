@@ -1,7 +1,7 @@
 <template>
     <nav class="fixed top-0 w-full bg-gray-800">
         <div class="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" class="flex items-center">
+            <a href="https://andycodev.github.io/" class="flex items-center">
                 <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" /> -->
                 <span class="self-center text-xl font-semibold whitespace-nowrap text-white">andycodev</span>
             </a>

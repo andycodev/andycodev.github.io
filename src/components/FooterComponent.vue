@@ -1,26 +1,9 @@
 <template>
-  <div class="flex items-center mt-3">
-    <h2 class="ml-2 mt-4 mb-4 text-base text-left font-medium text-gray-500">2023 — andycodev 👨‍💻</h2>
+  <div class="flex items-center justify-between mt-3">
+    <h2 class="ml-2 mt-4 mb-4 text-base text-left font-medium text-gray-500">{{ new Date().getFullYear() }} — andycodev
+      👨‍💻</h2>
     <button class="button-secondary text-right" v-show="showScrollButton" @click="scrollToTop">Volver al inicio</button>
   </div>
-  <!-- <v-footer color="grey lighten-2" class="mt-5" light padless>
-    <v-row justify="center" no-gutters>
-      <v-btn
-        v-for="redSocial in redesSociales"
-        :key="redSocial.id"
-        color="secondary"
-        text
-        rounded
-        class="my-2"
-        @click="openPage(redSocial.url)"
-      >
-        {{ redSocial.name }}
-      </v-btn>
-      <v-col class="indigo lighten-2 py-4 text-center white--text" cols="12">
-        {{ new Date().getFullYear() }} — <strong>andycodev 👨‍💻</strong>
-      </v-col>
-    </v-row>
-  </v-footer> -->
 </template>
 
 <script>
