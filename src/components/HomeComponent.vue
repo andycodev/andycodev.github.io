@@ -4,7 +4,7 @@
       <img class="w-24 h-24 rounded-full" src="../assets/andycodev.png" alt="">
       <div>
         <div class="font-semibold text-xl text-gray-600">Andy Giampierre Ordoñez Vega</div>
-        <div class="font-medium text-base text-gray-500">Fullstack Developer</div>
+        <div class="font-medium text-base text-gray-800 efect-write">Fullstack Developer</div>
         <div class="font-normal text-sm text-gray-400">Lima, Perú</div>
       </div>
     </div>
@@ -106,11 +106,10 @@ export default {
 .efect-write {
   display: block;
   white-space: nowrap;
-  border-right: 4px solid;
-  width: 22ch;
-  color: #2b649d;
-
-  animation: typing 2s steps(22), blink 0.5s infinite step-end alternate;
+  border-right: 3px solid;
+  width: 16ch;
+  /* color: #2b649d; */
+  animation: typing 2s steps(16), blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }
 
