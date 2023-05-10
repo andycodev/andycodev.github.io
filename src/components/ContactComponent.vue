@@ -4,7 +4,7 @@
     <!-- <label for="message" class="block mb-2 text-sm font-nomral text-gray-400">Escribir mensaje</label> -->
     <textarea id="message" rows="4"
       class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
-      @keyup="messageWhatsapp(message)" v-model="message" placeholder="Escibir mensaje a enviar...">
+      @keyup="messageWhatsapp(message)" v-model="message" placeholder="Escribir mensaje a enviar...">
     </textarea>
     <small v-if="showMessage" class="mt-2 text-sm text-red-500 font-medium">
       Escribir mínimo cuatro caracteres.

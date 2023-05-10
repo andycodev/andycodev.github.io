@@ -12,5 +12,5 @@ module.exports = defineConfig({
       },
     },
   },
- /*  transpileDependencies: ["vuetify"], */
+  /*  transpileDependencies: ["vuetify"], */
 });
