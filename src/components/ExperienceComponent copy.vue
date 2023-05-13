@@ -1,46 +1,12 @@
 <template>
-  <div id="experience" class="col-span-12 md:col-span-8 p-6 bg-white border border-gray-200 rounded-lg shadow mt-2">
+  <div id="experience"
+    class="col-span-12 md:col-span-8 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-white mt-2">
     <h2 class="mb-2 text-lg text-left font-semibold text-gray-600">{{ title }}</h2>
-    <ol class="border-l border-gray-200">
-      <li class="mb-10 -ml-1.5" v-for="(experience, index) in experiences" :key="experience.id">
-        <span class="bg-gray-500 text-sm font-semibold inline-flex items-center p-1.5 rounded-full mr-2">
-        </span>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400">{{ experience.date }}
-          <span v-if="experience.state === 1"
-            class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">Actualidad</span>
-        </time>
-        <h3 class="text-base font-medium text-gray-600 ml-5">{{ experience.entity }}</h3>
-        <p class="font-medium text-sm text-gray-500 ml-5">{{ experience.rol }}</p>
-        <!-- <div class="font-normal text-xs text-gray-400">Lima, Perú</div> -->
-        <ul class="font-normal text-base sm:text-sm text-gray-400 space-y-1 list-disc list-inside mt-2 ml-5">
-          <li v-for="(desc, index) in experience.description" :key="index">
-            {{ desc }}
-          </li>
-        </ul>
-      </li>
-    </ol>
-
-
-    <!-- <ol class="relative border-l border-gray-200">
-      <li class="mb-10 ml-4" v-for="(experience, index) in experiences" :key="experience.id">
-        <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white">
-        </div>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400">{{ experience.date }}
-          <span v-if="experience.state === 1"
-            class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">Actualidad</span>
-        </time>
-        <h3 class="text-base font-medium text-gray-600">{{ experience.entity }}</h3>
-        <p class="font-medium text-sm text-gray-500">{{ experience.rol }}</p>
-        <ul class="font-normal text-base sm:text-sm text-gray-400 space-y-1 list-disc list-inside mt-2">
-          <li v-for="(desc, index) in experience.description" :key="index">
-            {{ desc }}
-          </li>
-        </ul>
-      </li>
-    </ol> -->
-
-    <!-- <div class="mb-5" v-for="(experience, index) in experiences" :key="experience.id">
+    <div class="mb-5" v-for="(experience, index) in experiences" :key="experience.id">
       <div class="flex items-center space-x-4 mb-3">
+        <!-- <div class="inline-flex items-center justify-center w-16 h-16 overflow-hidden bg-gray-500 rounded-full">
+          <span class="font-medium text-gray-100">{{ index + 1 }}</span>
+        </div> -->
         <div>
           <div class="font-medium text-base text-gray-600">
             {{ experience.entity }}
@@ -57,7 +23,7 @@
           {{ desc }}
         </li>
       </ul>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -111,7 +77,7 @@ export default {
         img: "/template/images/analista-progrmador-2.svg",
         rol: "Analista Desarrollador",
         entity: "Unión Peruana del Norte e IATec",
-        date: "Junio 2022 - ",
+        date: "Junio 2022 - Actualidad",
         state: 1,
         description: {
 
