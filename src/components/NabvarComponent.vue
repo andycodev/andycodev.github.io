@@ -3,7 +3,7 @@
         <div class="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="https://andycodev.github.io/" class="flex items-center">
                 <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" /> -->
-                <span class="self-center text-xl font-semibold whitespace-nowrap text-white">andycodev</span>
+                <span class="self-center text-xl font-semibold whitespace-nowrap text-white">andycodev 👨‍💻</span>
             </a>
             <!-- <button class="button-primary" @click="scrollToSection">Experiencia</button>
             <ul class="flex space-x-4">

@@ -1,8 +1,15 @@
 <template>
-  <div class="flex items-center justify-between mt-3">
-    <h2 class="ml-2 mt-4 mb-4 text-base text-left font-medium text-gray-500">{{ new Date().getFullYear() }} — andycodev
-      👨‍💻</h2>
-    <button class="button-secondary text-right" v-show="showScrollButton" @click="scrollToTop">Volver al inicio</button>
+  <div>
+    <!-- <ul class="flex flex-wrap items-center justify-start mb-6 text-gray-800 mt-8">
+      <li v-for="redSocial in redesSociales" :key="redSocial.id">
+        <a href="#" class="mr-4 hover:underline md:mr-6" @click="openPage(redSocial.url)">{{ redSocial.name }}</a>
+      </li>
+    </ul> -->
+    <div class="flex items-center justify-between mt-3">
+      <h2 class="ml-2 mt-4 mb-4 text-base text-start font-medium text-gray-500">{{ new Date().getFullYear() }} — andycodev
+        👨‍💻</h2>
+      <button class="button-secondary text-right" v-show="showScrollButton" @click="scrollToTop">Volver al inicio</button>
+    </div>
   </div>
 </template>
 
@@ -23,14 +30,14 @@ export default {
       },
       {
         id: 3,
-        name: "Twitter",
-        url: "https://twitter.com/andycodev",
+        name: "Facebook",
+        url: "https://www.facebook.com/agov10",
       },
-      {
+      /* {
         id: 4,
         name: "Instagram",
         url: "https://www.instagram.com/andygiampierre/",
-      },
+      }, */
     ],
     showScrollButton: false
   }),

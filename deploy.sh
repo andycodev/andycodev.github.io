@@ -51,4 +51,4 @@ echo "iniciando ..."
    echo "deploy success"
 
 
-cd -
+# cd -
