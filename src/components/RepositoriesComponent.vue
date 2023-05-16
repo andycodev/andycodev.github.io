@@ -30,7 +30,7 @@
         <div class="text-center text-sm font-semibold text-gray-900 pt-4 p-0">
           <a href="#" class="font-medium text-blue-500 hover:underline"
             @click="openPage('https://github.com/andycodev?tab=repositories')">Ver todos los
-            repositorios</a>
+            repositorios en Github</a>
         </div>
       </ul>
     </transition>
