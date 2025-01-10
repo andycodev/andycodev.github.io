@@ -3,7 +3,7 @@
 # Primero dar permiso a deploy.sh
 #chmod +x deploy.sh 
 
-# Ejecutar deploy.sj
+# Ejecutar deploy.sh
 #./deploy.sh 
 
 
